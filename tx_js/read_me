@@ -12,6 +12,6 @@
        meanpooling。结合统计特征，分别构建模型，预估线上提交1.40
 3.模型改进：
   （1）从性别考虑，不同性别之间同年龄段点击序列差异很大，将gender和age预估目标结合。使用一个模型，将预测目标改为20分类。线上提交1.42
-  （1）广告素材id百分之30只出现一次，将其它id特征直接聚合，并作为type，构建新序列与create_id一起做word2vec。线上提升1.43
-  （2）lstm之后加selfattention。利用attention捕捉全局信息，attention之后接cnn利用cnn捕捉局部信息。线上1.439
-  （3）使用transformer对非create_id序列信息进行提取，利用create_id做attention pooling。线上提交1.445 rank 83
+  （2）广告素材id百分之30只出现一次，将其它id特征直接聚合，并作为type，构建新序列与create_id一起做word2vec。线上提升1.43
+  （3）lstm之后加selfattention。利用attention捕捉全局信息，attention之后接cnn利用cnn捕捉局部信息。线上1.439
+  （4）使用transformer对非create_id序列信息进行提取，利用create_id做attention pooling。线上提交1.445 rank 68
